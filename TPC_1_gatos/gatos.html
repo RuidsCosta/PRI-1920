@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title> Gatos e associados </title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body class="w3-gray">
+        <div class="w3-sidebar w3-bar-block w3-border-right w3-gray" style="display:none" id="index">
+            <button onclick="w3_close()" class="w3-bar-item w3-large w3-text-white">Close &times;</button>
+            <a href="#s1" onclick="w3_close()" class="w3-bar-item w3-button w3-text-white">Historia do gato</a>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-text-white">Link 2</a>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-text-white">Link 3</a>    
+        </div>
+        <div id="main">
+            <header class="w3-container w3-blue-gray">
+                <table>
+                    <td><button class="w3-button w3-blue-gray w3-xlarge" onclick="w3_open()">☰</button></td>
+                    <td><h1>Gatos e Associados</h1></td>
+                </table>
+            </header> 
+            <div  class="w3-text-white w3-container">
+                <h2 id="s1">Historia do gato</h2>
+                <p class="w3-left-alighn"> O gato, também conhecido como gato caseiro ou gato urbano, é um mamifero carnivoro da familia dos felídeos, muito popular como animal de estimação. Ocupando o topo da cadeia alimentar, é predador natural de diversos animais, como roedores, pássaros, lagartixas e alguns insetos.</p>
+            </div>
+        
+            <div class="w3-content w3-display-container" style="max-width: 800px">
+                <img class="slides" src="gato1.jpeg" style="width:100%">
+                <img class="slides" src="gato2.jpeg" style="width:100%">
+                <img class="slides" src="gato3.jpeg" style="width:100%">
+
+                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommidle" style="width: 100%">
+                    <div class="w3-left w3-hover-text-khaki" onclick="incrDiv(-1)"> &#10094; </div>
+                    <div class="w3-right w3-hover-text-khaki" onclick="incrDiv(1)"> &#10095; </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+        
+        <script>
+            //Funçao que trata da abertura e fecho d indice
+            function w3_open(){
+                document.getElementById("main").style.marginLeft = "25%";
+                document.getElementById("index").style.width = "25%";
+                document.getElementById("index").style.display = "block";
+            }
+            function w3_close(){
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("index").style.display = "none";
+            }
+
+            //Funçao que trata do carroussel
+
+            var slideInd = 1;
+            showIm(slideInd);
+
+            function incrDiv(n){
+                showIm(slideInd += n);
+            }
+
+            function showIm(n){
+                var i;
+                var x = document.getElementsByClassName("slides");
+                var dots = document.getElementsByClassName("demo");
+                if(n>x.length) (slideInd = 1);
+                if(n<1) (slideInd = x.length);
+                for (i=0; i<x.length; i++){
+                    x[i].style.display="none";
+                }
+                for(i=0; i<dots.length; i++){
+                    dots[i].className = dots[i].className.replace("w3-white", "");
+                }
+                x[slideInd-1].style.display="block";
+                dots[slideInd-1].className += "w3-white";
+            }
+
+        </script>
+
+
+    </body>
+</html>
