@@ -1,0 +1,17 @@
+extends layout
+block content                    
+    .w3-container
+        h1 Lista de elementos da tipologia
+        li
+          a(href="/") Voltar
+        table.w3-table-all
+            tr
+                th Sigla
+                th Designaçao 
+                th ID
+            each element in lista
+                tr
+                    td= element.sigla
+                    td= element.designacao
+                    td= element.id
+                    

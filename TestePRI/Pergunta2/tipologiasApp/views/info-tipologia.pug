@@ -1,0 +1,20 @@
+extends layout
+block content
+    .w3-container
+            header.w3-container.w3-teal
+                h1= tipologia.sigla
+                h3= tipologia.designacao
+                h4 Estado:
+                  h5= tipologia.estado
+
+                table.w3-table-all
+                  tr
+                      th 
+                        button.w3-button.w3-circle.w3-blue-grey(onclick="verEntidades('"+ tipologia.sigla +"')") Lista de entidades
+                      th 
+                        button.w3-button.w3-circle.w3-blue-grey(onclick="verProcsDona('"+ tipologia.sigla +"')") Processos Dona
+                      th
+                        button.w3-button.w3-circle.w3-blue-grey(onclick="verProcsPar('"+ tipologia.sigla +"')") Processos Participante
+
+            li
+                a(href="/lista-tipologias") Voltar

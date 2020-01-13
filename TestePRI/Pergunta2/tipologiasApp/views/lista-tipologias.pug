@@ -1,0 +1,18 @@
+extends layout
+block content                    
+    .w3-container
+        h1 Lista de tipologias
+        li
+          a(href="/") Voltar
+        table.w3-table-all
+            tr
+                th Sigla
+                th Designação 
+                th Estado
+            each tipologia in lista
+                tr
+                    td= tipologia.sigla
+                    td= tipologia.designacao
+                    td= tipologia.estado
+                    td
+                        button.w3-button.w3-circle.w3-blue-grey(onclick="verTipologias('"+ tipologia.sigla +"')") Ver Entidade
