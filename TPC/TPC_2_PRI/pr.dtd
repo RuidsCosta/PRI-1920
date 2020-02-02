@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT ProjectRecord (KeyName, Title, Subtitle, BegDate, EnDate, Supervisor, WorkTeam, Abstract, Deliverables) >
+<!ELEMENT KeyName (#PCDATA) >
+<!ELEMENT Title (#PCDATA) >
+<!ELEMENT Subtitle (#PCDATA) >
+<!ELEMENT BegDate (#PCDATA) >
+<!ELEMENT EnDate (#PCDATA) >
+<!ELEMENT Supervisor (#PCDATA) >
+
+<!ELEMENT WorkTeam (Member)+ >
+<!ELEMENT Member (MemberName, MemberMail) >
+<!ELEMENT MemberName (#PCDATA) >
+<!ELEMENT MemberMail (#PCDATA) >
+
+<!ELEMENT Abstract (Word)+ >
+<!ELEMENT Word (Regular, Bold, Italic) >
+
+<!ELEMENT Deliverables (Link)* >
+<!ELEMENT Link (#PCDATA) >
+
+<!ATTLIST Word
+            Regular CDATA #IMPLIED 
+            BOLD CDATA #IMPLIED
+            ITALIC CDATA #IMPLIED>
+
+<!ATTLIST Supervisor 
+            link CDATA #REQUIRED>
+        
+<!ATTLIST Link 
+            link CDATA #IMPLIED>

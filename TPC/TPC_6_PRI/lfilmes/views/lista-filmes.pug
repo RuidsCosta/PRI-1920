@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .w3-container
+        h1 Lista dos Filmes
+        table.w3-table-all
+            tr 
+                th Titulo
+                th Ano
+                th Pagina do Filme
+                th Apagar
+            each filme in lista
+                tr 
+                    td= filme.title
+                    td= filme.year
+                    td
+                        form.w3-container(action=`/filmes/${filme._id}` method='get')
+                                input.w3-btn.w3-border.w3-blue-grey(type='submit' value='Detalhes')
+                    td
+                        button.w3-button.w3-circle.w3-blue-grey(onclick="apagarFilme('"+ filme._id +"')") Apagar
+    footer.w3-container.w3-teal
+        address Gerado por Gestao de Filmes App:
+            a(href='/')  Voltar

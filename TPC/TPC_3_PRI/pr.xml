@@ -1,0 +1,42 @@
+zx<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/Users/ruicosta/Desktop/1%C2%BASem_1920/PLC/PRI/Project_record_final.dtd">
+<pr>
+    <meta>
+        <keyname> XML Transformation by XSL schemes </keyname>
+        <title> TP3 - XSL Stylesheets </title>
+        <subtitle> TPC para a UC PRI </subtitle>
+        <bdate>7 de Novembro de 2019</bdate>
+        <edate> 21 de Novembro de 2019</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr</homepage>
+        </supervisor>
+    </meta>
+    
+    <workteam>
+        <member>
+            <identifier>a79947</identifier>
+            <name>Rui Diogo Silva Costa</name>
+            <email>a79947@alunos.uminho.pt</email>
+            <photo path="foto.jpg"></photo>
+        </member>
+    </workteam>
+    
+    <abstract>
+        <p>XSL é uma ferramenta criada para transformar ficheiros XML em ficheiros doutro formato.</p>
+        <p>Essa mudança pode ser de XML para texto, HTML e muitos outros.</p>
+    </abstract>
+    
+    <deliverables>
+        <deliverable path="pr.xml">Project Record (XML)</deliverable>
+        <deliverable path="Project_record_final.dtd">Project Record (DTD)</deliverable>
+        <deliverable path="pr.xsl">Project Record (XSL)</deliverable>
+        <deliverable path="pr.html">Project Record (HTML)</deliverable>
+        <deliverable path="arqueositios.xml">Arquiosítios (XML)</deliverable>
+        <deliverable path="arqsits.xsl">Arquiosítios (XSL)</deliverable>
+        <deliverable path="website/index.html">Arquiosítios (HTML)</deliverable>
+        
+    </deliverables>
+    
+</pr>

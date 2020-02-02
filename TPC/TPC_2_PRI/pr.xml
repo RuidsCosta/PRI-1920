@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Abstract SYSTEM "file:/Users/ruicosta/Desktop/TPC_2_PRI/pr.dtd">
+
+<ProjectRecord>
+    <KeyName> PRI-1920-79947-TPC2</KeyName>
+    <Title>Create a dtd ofr a project Record</Title>
+    <Subtitle>Dtd</Subtitle>
+    <BegDate>4 de outubro</BegDate>
+    <EnDate>6 de outubro</EnDate>
+    <Supervisor link="http://www4.di.uminho.pt/~jcr/"></Supervisor>
+    <WorkTeam>
+        <Member>
+            <MemberName>Rui Costa</MemberName>
+            <MemberMail>a79947@alunos.uminho.pt</MemberMail>
+        </Member>
+    </WorkTeam>
+    <Abstract>
+        <Word>
+            <Regular>Hello World</Regular>
+            <Bold></Bold>
+            <Italic></Italic>
+        </Word>
+    </Abstract>
+    <Deliverables>http://www4.di.uminho.pt/~jcr/XML/didac/xmldocs/PR.html </Deliverables>
+</ProjectRecord>

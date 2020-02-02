@@ -1,0 +1,49 @@
+extends layout
+block content
+    .w3-container
+        .w3-container
+            table.w3-table-all
+                tr
+                    th Título
+                    th Ano
+                    tr  
+                        td= filme.title
+                        td= filme.year
+        .w3-container
+                table.w3-table-all
+                    tr.w3-container
+                        th Lista de Atores
+                        th Opções
+                        each ator in filme.cast
+                            tr.w3-container
+                                td= ator
+                                td
+                                    button.w3-button.w3-circle.w3-blue-grey(onclick="apagarAtor('"+ filme._id + '-' + ator +"')") Apagar
+        .w3-container
+                table.w3-table-all
+                    tr.w3-container
+                        th Lista de Generos
+                        th Opções
+                        each genero in filme.genres
+                            tr.w3-container
+                                td= genero
+                                td
+                                    button.w3-button.w3-circle.w3-blue-grey(onclick="apagarGenero('"+ filme._id + '-' + genero +"')") Apagar
+        w3-container      
+                table.w3-table-all
+                    h3 Adicionar
+                    tr.w3-container
+                        th 
+                            form.w3-container(action=`/filmes/ator/${filme._id}` method="post")
+                                label Ator:
+                                input.w3-input(type="text", name="cast")
+                                input.w3-input(type="submit" value="Adicionar")   
+                        th 
+                            form.w3-container(action=`/filmes/genero/${filme._id}` method="post")
+                                label Genero:
+                                input.w3-input(type="text", name="genres")
+                                input.w3-input(type="submit" value="Adicionar")  
+    footer.w3-container.w3-teal
+        address Gerado por Gestao de Filmes App:
+            a(href=`/filmes`)  Voltar aos filmes 
+        

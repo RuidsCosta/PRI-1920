@@ -1,0 +1,47 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+            h3 Aluno
+            .w3-card-4
+            table.w3-table-all
+                tr
+                    th Nome
+                    th Identificador
+                    th Curso
+                    tr
+                        td= aluno.nome
+                        td= aluno.identificador
+                        td= aluno.curso
+                .w3-card-4
+                    header.w3-container.w3-teal
+                        h3 Notas
+                    table.w3-table-all.w3-centered
+                        tr
+                            th Cadeira
+                            th Valor
+                            th Remover
+                        each n in aluno.notas
+                            tr
+                                td=n.nom
+                                td=n.valor
+                                td
+                                    button.w3-button.w3-blue-grey(onclick="apagaNota('" + aluno.identificador + ',' + n.idn + "')") Remover
+
+                h3 Nova Nota
+            .w3-container
+                form.w3-container(action='/alunos/'+aluno.identificador+'/notas' method='POST')
+                    label
+                        b Cadeira
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='nom')
+                    label 
+                        b Valor
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='valor')
+                    input.w3-btn.w3-blue-grey(type='submit' value='Enviar')
+        
+                        
+
+
+        footer.w3-container.w3-teal
+            address Gerado por Lista de Alunos App::

@@ -1,0 +1,4 @@
+//entrada[contains( email , 'rui')]/*
+//entrada[contains( tipo , 'pessoa') or contains( tipo , 'empresa')]/*
+//entrada[not(@tipo = 'empresa')]
+//entrada[not(contains( nome , 'rui'))]/*
